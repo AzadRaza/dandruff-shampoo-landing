@@ -181,15 +181,41 @@ to{opacity:1;transform:translateY(0);}
 
 <h2>Get Best Product Recommendations</h2>
 
-<form>
+<form id="leadForm">
 
-<input type="text" placeholder="Your Name">
+<input type="text" name="name" placeholder="Your Name" required>
 
-<input type="email" placeholder="Your Email">
+<input type="email" name="email" placeholder="Your Email" required>
 
-<button>Get Recommendation</button>
+<button type="submit">Get Recommendation</button>
 
 </form>
+
+<script>
+
+const scriptURL = "https://script.google.com/macros/s/AKfycbxF0yTizjwuSUcUY0XMytJs-W5EAwAfDJ0xSCpbzE4yVqB3ipUsA93i9h20YDuwXRU/exec";
+
+const form = document.getElementById('leadForm');
+
+form.addEventListener('submit', e => {
+
+e.preventDefault();
+
+fetch(scriptURL, {
+method: 'POST',
+body: JSON.stringify({
+name: form.name.value,
+email: form.email.value
+})
+})
+
+.then(response => alert("Thank you! We will contact you soon."))
+
+.catch(error => alert("Error!"));
+
+});
+
+</script>
 
 </section>
 
