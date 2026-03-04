@@ -2,62 +2,140 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Anti-Dandruff Shampoo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Product4U</title>
 
 <style>
 
-body{
-font-family: Arial;
+*{
 margin:0;
-background:#f5f5f5;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
 }
 
-.header{
-background:#1e8f4c;
+body{
+background:#0f172a;
 color:white;
-text-align:center;
-padding:40px;
+line-height:1.5;
 }
+
+/* HERO */
 
 .hero{
+padding:60px 20px;
 text-align:center;
-padding:40px;
+background:linear-gradient(135deg,#1e293b,#020617);
+animation:fade 1.5s ease;
 }
 
-.hero img{
-width:250px;
+.hero h1{
+font-size:28px;
+margin-bottom:15px;
 }
+
+.hero p{
+opacity:0.8;
+margin-bottom:25px;
+}
+
+/* BUTTON */
+
+.btn{
+display:inline-block;
+padding:14px 24px;
+background:#22c55e;
+border-radius:30px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#16a34a;
+transform:scale(1.05);
+}
+
+/* FEATURES */
 
 .features{
-background:white;
-padding:40px;
+padding:40px 20px;
+}
+
+.card{
+background:#1e293b;
+padding:20px;
+margin-bottom:15px;
+border-radius:10px;
+}
+
+/* LEAD FORM */
+
+.lead{
+padding:50px 20px;
 text-align:center;
+background:#020617;
 }
 
-.features div{
-margin:20px;
-}
-
-.cta{
-background:#1e8f4c;
-color:white;
-text-align:center;
-padding:30px;
-}
-
-button{
-background:white;
-color:#1e8f4c;
+.lead input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:6px;
 border:none;
-padding:15px 25px;
-font-size:18px;
+}
+
+.lead button{
+width:100%;
+padding:14px;
+border:none;
+background:#22c55e;
+color:white;
+font-size:16px;
+border-radius:6px;
 cursor:pointer;
 }
 
-.footer{
-text-align:center;
-padding:20px;
+/* WHATSAPP CTA */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:14px 18px;
+border-radius:50px;
+text-decoration:none;
 font-size:14px;
+}
+
+/* DESKTOP */
+
+@media(min-width:768px){
+
+.hero h1{
+font-size:42px;
+}
+
+.features{
+display:flex;
+gap:20px;
+}
+
+.card{
+flex:1;
+}
+
+}
+
+/* ANIMATION */
+
+@keyframes fade{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
 }
 
 </style>
@@ -65,43 +143,61 @@ font-size:14px;
 
 <body>
 
-<div class="header">
-<h1>Goodbye Dandruff Forever</h1>
-<p>Powerful Herbal Anti-Dandruff Shampoo</p>
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>Find The Best Products Online</h1>
+<p>Trusted reviews and solutions that actually work</p>
+
+<a class="btn" href="#lead">Get Recommendations</a>
+
+</section>
+
+<!-- FEATURES -->
+
+<section class="features">
+
+<div class="card">
+<h3>Research Based</h3>
+<p>We test and compare products before recommending.</p>
 </div>
 
-<div class="hero">
-<img src="https://images.unsplash.com/photo-1585238342028-78d387f4a707" alt="shampoo">
-<h2>Healthy Scalp. Strong Hair.</h2>
-<p>Clinically tested formula removes dandruff from the root.</p>
+<div class="card">
+<h3>Best Deals</h3>
+<p>Find the best price and offers.</p>
 </div>
 
-<div class="features">
-
-<h2>Why Choose Our Shampoo?</h2>
-
-<div>✔ Removes dandruff in 7 days</div>
-<div>✔ Natural herbal ingredients</div>
-<div>✔ Prevents itchy scalp</div>
-<div>✔ Strengthens hair roots</div>
-
+<div class="card">
+<h3>Expert Picks</h3>
+<p>Only high quality products are listed.</p>
 </div>
 
-<div class="cta">
+</section>
 
-<h2>Get Your Bottle Today</h2>
+<!-- LEAD GENERATION -->
 
-<button onclick="alert('Order coming soon!')">
-Order Now
-</button>
+<section class="lead" id="lead">
 
-</div>
+<h2>Get Best Product Recommendations</h2>
 
-<div class="footer">
+<form>
 
-© 2026 Healthy Hair Labs
+<input type="text" placeholder="Your Name">
 
-</div>
+<input type="email" placeholder="Your Email">
+
+<button>Get Recommendation</button>
+
+</form>
+
+</section>
+
+<!-- WHATSAPP -->
+
+<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX">
+Chat on WhatsApp
+</a>
 
 </body>
 </html>
